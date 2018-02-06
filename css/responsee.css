@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Responsee CSS - v4.1 - 2017-05-14
  * https://www.myresponsee.com
  * Copyright 2016, Vision Design - graphic zoo
@@ -30,7 +30,7 @@ h5 {font-size:1.1rem;}
 h6 {font-size:0.9rem;}    
 a, a:link, a:visited, a:hover, a:active {
   text-decoration:none;
-  color:#9BB800;
+  color: #44463c;
   transition:color 0.20s linear 0s;
   -o-transition:color 0.20s linear 0s;
   -ms-transition:color 0.20s linear 0s;
