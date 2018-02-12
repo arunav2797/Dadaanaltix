@@ -4,6 +4,21 @@
 body {
   background: #fff;
 }
+
+#sec1{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#about{
+  background: #fff;
+}
+#head{
+  height: 718px;
+}
+#about-text {
+  font-size: 15px;
+}
 p {
   color: #777;
   font-size: 0.85rem;
@@ -169,6 +184,17 @@ iframe {
   padding-top: 5px;
 }
 
+
+#maintext {
+  text-align: center;
+  margin-left: -35%;
+  height:  30%;
+  margin-top: auto;
+}
+
+#tagline {
+  font-size: 15px;
+}
 /* Tables */
 table {
 	background:none repeat scroll 0 0 #fff;
@@ -685,9 +711,9 @@ aside.aside-left {
 }
 .content-center-vertical {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%; 
+  left: 25%;
+  right: auto;
+  top: 40%;
   transform: translateY(-50%);
   -o-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -867,6 +893,7 @@ aside.aside-left {
   margin-top: 80px !important;
   margin-bottom: 80px !important;
   display: block;
+  /* height:  30%; */
 }
 
 .margin-left-0 {
@@ -1192,6 +1219,9 @@ p.form-success {
   .size-1140 .line.content-center-vertical {
       padding: 0 2rem;
   }
+  #head{
+    height: 500px;;
+  }
 }
 
 /* -768px version */
@@ -1199,6 +1229,11 @@ p.form-success {
     .top-nav .right {
       float: none;
     }
+
+    #maintext {
+      margin-bottom: 50%;
+    }
+
     .logo {
       max-width: 250px;
       margin: 0 auto;
@@ -1548,6 +1583,19 @@ p.form-success {
       padding: 10px 0;
       text-align: center;
     }
+    #head{
+      height: 300px;
+    }
+    #maintext {
+      text-align: center;
+      margin-left: -40%;
+      margin-top: auto;
+    }
+    
+    #tagline {
+      font-size: 10px;
+    }
+
     .top-bar-social.right {
       display: table;
       float: none;
@@ -1927,6 +1975,7 @@ nav.fixed .logo-dark, .fixed nav .logo-dark {
   position: relative;
   top: 22px;
   width: 100%;
+  margin-left: 40px;
 }
 .top-nav li a {
   color: #fff;
@@ -2016,6 +2065,9 @@ video {
   header.position-absolute {
     background: #fff none repeat scroll 0 0;
     position: relative;
+  }
+  #head{
+    height: 300px;;
   }
   .logo img {
     margin: 0 auto;

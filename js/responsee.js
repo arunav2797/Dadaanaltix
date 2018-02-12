@@ -5,6 +5,7 @@
  * Free to use under the MIT license.
 */
 jQuery(document).ready(function($) {
+  let flag = true;
   //Responsee tabs
   $('.tabs').each(function(intex, element) {
       current_tabs = $(this);
@@ -71,7 +72,14 @@ jQuery(document).ready(function($) {
     $('.top-nav ul ul li:hover > ul').toggleClass('show-ul', 'slow');   
   });
   //Mobile aside navigation  
-  $('.nav-text').click(function() { 
+  $('.nav-text').click(function() {
+    if (flag) {
+      $('#head').css('display', 'none');
+      flag = false;
+    } else {
+      $('#head').css('display', 'block');
+      flag = true;
+    }
     $('.top-nav > ul').toggleClass('show-menu', 'slow');
   }); 
   //Custom forms

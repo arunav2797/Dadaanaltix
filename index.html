@@ -2,7 +2,6 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dadaanaltix</title>
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/icons.css">
@@ -13,7 +12,9 @@
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>      
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" media="screen" href="css/style.css">
   </head>
   
   <body class="size-1140">
@@ -57,28 +58,60 @@
     <!-- MAIN -->
     <main role="main">    
       <!-- Main Header -->
-      <header>
-        <div class="carousel-default owl-carousel carousel-main carousel-nav-white background-dark text-center">
-          <div class="item">
-            <div class="s-12">
-              <img src="img/header.jpg" alt="">
-              <div class="carousel-content">
-                <div class="content-center-vertical line">
-                  <div class="margin-top-bottom-80">
-                    <!-- Title -->
-                    <h1 class="text-white margin-bottom-30 text-size-60 text-m-size-30 text-line-height-1">We Evaluate Data</h1>
-                    <div class="s-12 m-10 l-8 center"><p class="text-white text-size-14 margin-bottom-40">The Process of Interpreting the meaning of the data we have collected, organized, and displayed in the form of a table, bar chart, line graph, or visual representation.</p></div>
-                    <div class="line">
-                      <div class="s-12 m-12 l-3 center">
-                        <a class="button button-white-stroke s-12" href="/">Search for Data</a>
-                      </div>       
-                    </div>  
+      <header id="head">
+        <!-- count particles
+        <div class="count-particles">
+            <span class="js-count-particles">--</span> particles
+          </div> -->
+    
+         <!-- particles.js container -->
+          <div id="particles-js">
+              <div class="item">
+                <div class="s-12">
+                  <!-- <img src="img/header.jpg" alt=""> -->
+                  <div class="carousel-content">
+                    <div class="content-center-vertical line">
+                      <div class="margin-top-bottom-80" id="maintext">
+                        <!-- Title -->
+                        <h1 class="text-white margin-bottom-30 text-size-60 text-m-size-30 text-line-height-1" id="we">We Evaluate Data</h1>
+                        <div class="s-12 m-10 l-8 center"><p class="text-white text-size-14 margin-bottom-40" id="tagline">The Process of Interpreting the meaning of the data we have collected, organized, and displayed in the form of a table, bar chart, line graph, or visual representation.</p></div>
+                        <div class="line">
+                          <div class="s-12 m-12 l-3 center">
+                            <a class="button button-white-stroke s-12" href="/" id="mainbutton">Search for Data</a>
+                          </div>       
+                        </div>  
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>              
-        </div>               
+              </div>              
+          </div>
+          <!-- scripts -->
+  <script src="particles.js"></script>
+  <script src="js/app.js"></script>
+  
+  <!-- stats.js -->
+  <!-- <script src="js/lib/stats.js"></script> -->
+  <script>
+    var count_particles, stats, update;
+    stats = new Stats;
+    stats.setMode(0);
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.left = '0px';
+    stats.domElement.style.top = '0px';
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector('.js-count-particles');
+    update = function() {
+      stats.begin();
+      stats.end();
+      if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+        count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+      }
+      requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+  </script>
+                 
       </header>
       
       <!-- Section 1 -->
@@ -88,15 +121,15 @@
             <div class="s-12 m-12 l-4 margin-m-bottom">
               <div class="padding-2x block-bordered">
                 <i class="icon-sli-shield icon3x text-dark center margin-bottom-30"></i>
-                <h2 class="text-thin">Your Data is in<br> Secure Hands</h2>
-                <p class="margin-bottom-30">We ensure your data remains private and that your data remains secure.<br>Your data won't be shared with </br>Advertisers.</p>
+                <h2 class="text-thin" id="sec1">Your Data is in<br> Secure Hands</h2>
+                <p class="margin-bottom-30">We ensure your data remains private and that your data remains secure.<br>Your data won't be shared with Advertisers.</p>
                 
               </div>
             </div>
             <div class="s-12 m-12 l-4 margin-m-bottom">
               <div class="padding-2x block-bordered">
                 <i class="icon-sli-umbrella icon3x text-dark center margin-bottom-30"></i>
-                <h2 class="text-thin">Get the Information<BR> you need</h2>
+                <h2 class="text-thin" id="sec1">Get the Information<BR> you need</h2>
                 <p class="margin-bottom-30">Our precisely structured algorithms traverse through the database and finds the patterns and analytics you need for your business.</p>
                 
               </div>
@@ -104,7 +137,7 @@
             <div class="s-12 m-12 l-4 margin-m-bottom">
               <div class="padding-2x block-bordered">
                 <i class="icon-sli-home icon3x text-dark center margin-bottom-30"></i>
-                <h2 class="text-thin">All Your Data Needs<br> Under One Roof</h2>
+                <h2 class="text-thin" id="sec1">All Your Data Needs<br> Under One Roof</h2>
                 <p class="margin-bottom-30">Our company deals with data analysis on Healthcare, Movie Analytics, Social and Information Network Analysis, Business Analytics</p>
                 
               </div>
@@ -114,7 +147,7 @@
       </section>
       
       <!-- Section 1 -->
-      <section class="section">
+      <section class="section" id="about">
         <div class="line">
           <h2 class="text-size-50 text-center">About Us</h2>
           <hr class="break-small background-primary break-center">
@@ -125,10 +158,10 @@
               <p class="h1 text-size-30 margin-m-bottom-30 text-primary text-line-height-1 text-right">We Are<br> Data<br> Analytics<br> Heroes</p>
             </div>
             <div class="s-12 m-12 l-5">
-              <p class="text-size-14 margin-m-bottom-30 text-dark">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica. Dolor in hendrerit in vulputate velit esse molestie consequat. Mirum est notare quam littera gothica. </p>
+              <p class="text-size-14 margin-m-bottom-30 text-dark" id="about-text">Dadaanlitix offers diligent analytics and data science services in various spheres of the industry, be it business, healthcare, entertainment industry or social media.</p>
             </div>
             <div class="s-12 m-12 l-5">
-              <p class="text-size-14 text-dark">Mirum est notare quam littera gothica. Dolor in hendrerit in vulputate velit esse molestie consequat. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+              <p class="text-size-14 text-dark" id="about-text">We transform the way in which you make decisions. Smart and impactful analytics to enhance your experience, and let your brand grow. </p>
             </div>
           </div>
         </div>    
